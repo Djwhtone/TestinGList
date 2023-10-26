@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20230711002941_InitalC.cs" />
+    <Compile Remove="Migrations\20230711002941_InitalC.Designer.cs" />
+    <Compile Remove="Migrations\20230711003431_TaskTable.cs" />
+    <Compile Remove="Migrations\20230711003431_TaskTable.Designer.cs" />
+    <Compile Remove="Migrations\20230711010528_cleanup.cs" />
+    <Compile Remove="Migrations\20230711010528_cleanup.Designer.cs" />
+    <Compile Remove="Migrations\20230711015231_dbUpdate.cs" />
+    <Compile Remove="Migrations\20230711015231_dbUpdate.Designer.cs" />
+    <Compile Remove="Migrations\20230711031448_Taskadd.cs" />
+    <Compile Remove="Migrations\20230711031448_Taskadd.Designer.cs" />
+    <Compile Remove="Migrations\20230711033112_InitialCreate.cs" />
+    <Compile Remove="Migrations\20230711033112_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20230711035822_InitialCreate.cs" />
+    <Compile Remove="Migrations\20230711035822_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20230711035918_InitialCreate.cs" />
+    <Compile Remove="Migrations\20230711035918_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20230711040403_InitialCreate.cs" />
+    <Compile Remove="Migrations\20230711040403_InitialCreate.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NewTaskDBF.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NewTaskDBF_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
